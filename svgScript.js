@@ -42,9 +42,26 @@ grow.addEventListener("click", function(){
 		rid=window.requestAnimationFrame(dot);
 	}//dot fn
 	dot();
-});
-		
+});//growing circle		
 		
 var dvd = document.getElementById("dvd");
+dvd.addEventListener('click', function(){
+	window.cancelAnimationFrame(rid);
+	var velX=1;
+	var velY=1;
+	var maxX=500-128;
+	var maxY=500-128+26;
+	var x=Math.random()*maxX;
+	var y=Math.random()*maxY;
+
+	var d=function(){
+		var dImage=document.createElementNS("http://www.w3.org/2000/svg", 
+"image");
+		
+		dImage.setAttribute("http://www.w3.org/1999/xlink", "dvd.png");
+		while(svg.lastChild){
+			svg.removeChild(lastChild);
+		}//while
+		
 
 

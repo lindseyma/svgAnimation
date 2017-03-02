@@ -24,7 +24,7 @@ grow.addEventListener("click", function(){
 		}//while
 		circle.setAttribute("cx",250);
 		circle.setAttribute("cy",250);
-		if(x>=300){
+		if(x>=250){
 			grow=false;
 		}
 		if(x<=0){
