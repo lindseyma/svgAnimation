@@ -58,10 +58,24 @@ dvd.addEventListener('click', function(){
 		var dImage=document.createElementNS("http://www.w3.org/2000/svg", 
 "image");
 		
-		dImage.setAttribute("http://www.w3.org/1999/xlink", "dvd.png");
+		dImage.setAttributeNS("http://www.w3.org/1999/xlink","href", "dvd.png");
 		while(svg.lastChild){
-			svg.removeChild(lastChild);
+			svg.removeChild(svg.lastChild);
 		}//while
+		if(x>maxX||x<=0){
+		    velX*=-1;
+		}
+		if(y>=maxY||y<=-26){
+		    velY*=-1;
+		}
+		x+=velX;
+		y+=velY;
+		dImage.setAttribute("x", x);
+		dImage.setAttribute("y", y);
+		svg.appendChild(dImage);
+		rid=window.requestAnimationFrame(d);
+	}
+	d();
+    });//dvd
 		
-
 
