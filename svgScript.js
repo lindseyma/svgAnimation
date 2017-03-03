@@ -1,10 +1,6 @@
 var svg = document.getElementById("vimage");
 var rid;
 
-//dvd img
-var image=new Image();
-image.src="dvd.png";
-
 //stopbutton
 var stop = document.getElementById("stop");
 stop.addEventListener("click", function(){
